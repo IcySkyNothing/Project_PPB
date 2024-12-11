@@ -18,6 +18,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.navigation.NavHostController
 import com.mukeshsolanki.snake.R
 import com.mukeshsolanki.snake.data.cache.GameCache
+import com.mukeshsolanki.snake.domain.extension.launchActivity
 import com.mukeshsolanki.snake.presentation.component.AppBar
 import com.mukeshsolanki.snake.presentation.component.AppButton
 import com.mukeshsolanki.snake.presentation.component.DisplayLarge
@@ -25,6 +26,8 @@ import com.mukeshsolanki.snake.presentation.theme.border2dp
 import com.mukeshsolanki.snake.presentation.theme.padding16dp
 import com.mukeshsolanki.snake.presentation.theme.padding64dp
 import com.mukeshsolanki.snake.presentation.theme.width248dp
+import com.mukeshsolanki.snake.domain.navigation.Screen
+import com.mukeshsolanki.snake.presentation.activity.GameActivity
 import kotlinx.coroutines.launch
 
 @Composable
@@ -34,6 +37,7 @@ fun SettingScreen(navController: NavHostController) {
     val scope = rememberCoroutineScope()
     val focusRequester = remember { FocusRequester() }
     val context = LocalContext.current
+
     AppBar(
         title = stringResource(R.string.title_settings),
         onBackClicked = { navController.popBackStack() }) {
@@ -85,7 +89,8 @@ fun SettingScreen(navController: NavHostController) {
                 scope.launch {
                     dataStore.savePlayerName(text.text.trim())
                     Toast.makeText(context, R.string.player_name_updated, Toast.LENGTH_SHORT).show()
-                    navController.popBackStack()
+                    context.launchActivity<GameActivity>()
+                    navController.navigate(Screen.Menu.route)
                 }
             }
         }

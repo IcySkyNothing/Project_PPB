@@ -31,23 +31,31 @@ fun MenuScreen(navController: NavHostController) {
         verticalArrangement = Arrangement.Center
     ) {
         val context = LocalContext.current
-        DisplayLarge(text = stringResource(id = R.string.app_name))
-        AppButton(
+        DisplayLarge(
+            text = stringResource(id = R.string.app_name),
             modifier = Modifier
-                .width(width248dp)
-                .padding(top = padding64dp),
-            text = stringResource(R.string.new_game)
-        ) { context.launchActivity<GameActivity>() }
+                .padding(bottom = padding64dp))
+
+        AppButton(
+            modifier = Modifier.width(width248dp),
+            text = stringResource(R.string.settings)
+        ) {
+            navController.navigate(Screen.Settings.route)
+        }
+
+
         AppButton(
             modifier = Modifier.width(width248dp),
             text = stringResource(id = R.string.high_score)
         ) {
             navController.navigate(Screen.HighScores.route)
         }
-        AppButton(modifier = Modifier.width(width248dp), text = stringResource(R.string.settings)) {
-            navController.navigate(Screen.Settings.route)
-        }
-        AppButton(modifier = Modifier.width(width248dp), text = stringResource(R.string.about)) {
+
+
+        AppButton(
+            modifier = Modifier.width(width248dp),
+            text = stringResource(R.string.about)
+        ) {
             navController.navigate(Screen.About.route)
         }
     }
