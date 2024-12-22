@@ -31,7 +31,7 @@ import com.mukeshsolanki.snake.presentation.activity.GameActivity
 import kotlinx.coroutines.launch
 
 @Composable
-fun SettingScreen(navController: NavHostController) {
+fun SetNameScreen(navController: NavHostController) {
     val dataStore = GameCache(LocalContext.current)
     var text by remember { mutableStateOf(TextFieldValue("")) }
     val scope = rememberCoroutineScope()
@@ -39,7 +39,7 @@ fun SettingScreen(navController: NavHostController) {
     val context = LocalContext.current
 
     AppBar(
-        title = stringResource(R.string.title_settings),
+        title = stringResource(R.string.title_SetName),
         onBackClicked = { navController.popBackStack() }) {
         Column(
             modifier = Modifier

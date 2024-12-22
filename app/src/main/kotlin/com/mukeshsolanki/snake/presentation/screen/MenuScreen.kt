@@ -10,9 +10,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.navigation.NavHostController
 import com.mukeshsolanki.snake.R
-import com.mukeshsolanki.snake.domain.extension.launchActivity
 import com.mukeshsolanki.snake.domain.navigation.Screen
-import com.mukeshsolanki.snake.presentation.activity.GameActivity
 import com.mukeshsolanki.snake.presentation.component.AppButton
 import com.mukeshsolanki.snake.presentation.component.DisplayLarge
 import com.mukeshsolanki.snake.presentation.theme.border2dp
@@ -38,7 +36,7 @@ fun MenuScreen(navController: NavHostController) {
 
         AppButton(
             modifier = Modifier.width(width248dp),
-            text = stringResource(R.string.settings)
+            text = stringResource(R.string.SetName)
         ) {
             navController.navigate(Screen.Settings.route)
         }

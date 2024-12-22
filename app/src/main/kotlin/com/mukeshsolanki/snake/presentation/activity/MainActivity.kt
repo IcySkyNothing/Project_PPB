@@ -10,7 +10,8 @@ import com.mukeshsolanki.snake.domain.navigation.Screen
 import com.mukeshsolanki.snake.presentation.screen.AboutScreen
 import com.mukeshsolanki.snake.presentation.screen.HighScoreScreen
 import com.mukeshsolanki.snake.presentation.screen.MenuScreen
-import com.mukeshsolanki.snake.presentation.screen.SettingScreen
+import com.mukeshsolanki.snake.presentation.screen.SetNameScreen
+
 
 class MainActivity : BaseActivity() {
     private lateinit var navController: NavHostController
@@ -26,7 +27,7 @@ class MainActivity : BaseActivity() {
         NavHost(navController = navController, startDestination = Screen.Menu.route) {
             composable(Screen.Menu.route) { MenuScreen(navController) }
             composable(Screen.HighScores.route) { HighScoreScreen(navController) }
-            composable(Screen.Settings.route) { SettingScreen(navController) }
+            composable(Screen.Settings.route) { SetNameScreen(navController) }
             composable(Screen.About.route) { AboutScreen(navController) }
         }
     }
