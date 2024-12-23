@@ -3,7 +3,7 @@
     <string name="about_name">Tugas Ular</string>
     <string name="default_player_name">Player 1</string>
     <string name="about_game">Game ini berdasarkan konsep dari game Snake yang dibuat oleh Mukesh.</string>
-    <string name="title_about">About</string>
+    <string name="title_back">Back</string>
     <string name="game_over">Goblok!</string>
     <string name="your_score">Nilai Anda: %s</string>
     <string name="try_again">Coba Lagi</string>
@@ -13,7 +13,6 @@
     <string name="new_game">Mulai Game</string>
     <string name="SetName">Memulai</string>
     <string name="about">Tentang Kita</string>
-    <string name="title_SetName">Player Name</string>
     <string name="save">Save</string>
     <string name="player_name_updated">Player Name Updated</string>
 </resources>

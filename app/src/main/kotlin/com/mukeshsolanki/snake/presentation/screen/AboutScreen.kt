@@ -28,7 +28,7 @@ fun AboutScreen(navController: NavHostController) {
     val builder = remember { CustomTabsIntent.Builder() }
     val customTabsIntent = remember { builder.build() }
     AppBar(
-        title = stringResource(R.string.title_about),
+        title = stringResource(R.string.title_back),
         onBackClicked = { navController.popBackStack() }) {
         Column(
             modifier = Modifier

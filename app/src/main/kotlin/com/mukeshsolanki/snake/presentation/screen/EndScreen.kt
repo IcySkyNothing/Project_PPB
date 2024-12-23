@@ -39,6 +39,7 @@ fun EndScreen(score: Int, onTryAgain: () -> Unit) {
                 text = stringResource(id = R.string.your_score, score),
             )
             AppButton(text = stringResource(R.string.try_again)) { onTryAgain.invoke() }
+
         }
     }
 }

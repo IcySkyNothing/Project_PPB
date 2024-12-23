@@ -39,7 +39,7 @@ fun SetNameScreen(navController: NavHostController) {
     val context = LocalContext.current
 
     AppBar(
-        title = stringResource(R.string.title_SetName),
+        title = stringResource(R.string.title_back),
         onBackClicked = { navController.popBackStack() }) {
         Column(
             modifier = Modifier
